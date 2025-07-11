@@ -1,0 +1,8 @@
+# OpenCV-only requirements (no MediaPipe dependency)
+# Use this for systems where MediaPipe is not available
+
+opencv-python>=4.5.0
+numpy>=1.21.0
+pandas>=1.3.0
+matplotlib>=3.5.0
+Pillow>=8.0.0

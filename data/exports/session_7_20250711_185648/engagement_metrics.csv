@@ -1,0 +1,7 @@
+id,session_id,timestamp,total_faces,eye_contact_score,alertness_score,smile_count,laugh_count,overall_engagement,individual_scores
+35,7,661117.971658291,1,100.0,100.0,1,1,85.0375,"{""0"": {""eye_contact"": ""True"", ""alertness"": 1.0, ""is_smiling"": true, ""is_laughing"": true, ""head_pose"": [-2.833333333333333, -3.375, 0.0]}}"
+36,7,661123.012016791,1,100.0,100.0,4,4,85.6,"{""0"": {""eye_contact"": ""True"", ""alertness"": 1.0, ""is_smiling"": false, ""is_laughing"": false, ""head_pose"": [-2.0833333333333335, -4.640625, 0.0]}}"
+37,7,661128.07317775,1,100.0,30.0,6,6,56.0,"{""0"": {""eye_contact"": ""True"", ""alertness"": 0.3, ""is_smiling"": false, ""is_laughing"": false, ""head_pose"": [-9.75, -10.6171875, 0.0]}}"
+38,7,661133.118308125,1,100.0,100.0,1,1,85.0375,"{""3"": {""eye_contact"": ""True"", ""alertness"": 1.0, ""is_smiling"": true, ""is_laughing"": true, ""head_pose"": [-6.916666666666667, -3.2343749999999996, 0.0]}}"
+39,7,661138.187515833,1,100.0,100.0,1,1,85.0375,"{""3"": {""eye_contact"": ""True"", ""alertness"": 1.0, ""is_smiling"": true, ""is_laughing"": true, ""head_pose"": [-7.25, -5.484375, 0.0]}}"
+40,7,661143.284735958,1,100.0,30.0,0,0,46.0,"{""4"": {""eye_contact"": ""True"", ""alertness"": 0.3, ""is_smiling"": false, ""is_laughing"": false, ""head_pose"": [-8.166666666666666, -17.578125, 0.0]}}"

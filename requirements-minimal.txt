@@ -1,0 +1,9 @@
+# Minimal requirements for AI Audience Engagement Scanner
+# Use this if the main requirements.txt has compatibility issues
+
+opencv-python
+mediapipe==0.10.21
+numpy
+pandas
+matplotlib
+Pillow
