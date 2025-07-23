@@ -1,4 +1,7 @@
-#!/usr/bin/env python3
+pip install -r requirements.txtpip install -r requirements.txt#!/usr/bin/env python3
+# Install required packages from the requirements.txt file
+subprocess.run([sys.executable, '-m', 'pip', 'install', '-r', 'requirements.txt'])
+
 """
 Setup script for AI Audience Engagement Scanner
 Handles installation and initial setup.
