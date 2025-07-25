@@ -65,6 +65,11 @@ A real-time Python application that analyzes audience engagement through facial 
    python -c "import cv2; cap = cv2.VideoCapture(0); print('Camera OK' if cap.isOpened() else 'Camera Error'); cap.release()"
    ```
 
+5. **Detect available cameras** (if you have multiple cameras):
+   ```bash
+   python detect_cameras.py
+   ```
+
 ## Usage
 
 ### Starting the Application
@@ -79,6 +84,12 @@ A real-time Python application that analyzes audience engagement through facial 
    **For OpenCV-only version** (if MediaPipe is not available):
    ```bash
    python src/main_opencv.py
+   ```
+   
+   **To use a specific camera** (when multiple cameras are connected):
+   ```bash
+   python src/main_opencv.py 1    # Use camera index 1
+   python src/main_opencv.py 2    # Use camera index 2
    ```
 
 2. **Using the Dashboard**:
@@ -169,6 +180,7 @@ Default thresholds can be modified in `engagement_analyzer.py`:
    - Ensure camera is connected and not used by other applications
    - Try different camera indices (0, 1, 2...)
    - Check camera permissions
+   - Use `python detect_cameras.py` to see available cameras
 
 2. **Poor face detection**:
    - Ensure adequate lighting

@@ -1,0 +1,28 @@
+AUDIENCE ENGAGEMENT ANALYSIS REPORT
+========================================
+
+Session ID: 11
+Start Time: 2025-07-24 07:27:44
+End Time: 2025-07-24 07:29:57
+Duration: 121 seconds
+
+SUMMARY STATISTICS:
+--------------------
+Average Engagement Score: 42.5%
+Maximum Faces Detected: 3
+Total Smiles: 13
+Total Laughs: 13
+
+DETAILED METRICS:
+--------------------
+Peak Engagement: 61.8%
+Lowest Engagement: 24.0%
+Average Eye Contact: 45.3%
+Average Alertness: 45.8%
+Engagement Standard Deviation: 10.5%
+
+ENGAGEMENT DISTRIBUTION:
+--------------------
+High Engagement (>70%): 0/25 samples (0.0%)
+Medium Engagement (40-70%): 13/25 samples (52.0%)
+Low Engagement (<40%): 12/25 samples (48.0%)

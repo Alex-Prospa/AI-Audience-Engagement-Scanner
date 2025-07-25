@@ -22,7 +22,7 @@ from gui_dashboard import EngagementDashboard
 from data_manager import DataManager
 
 class EngagementScannerOpenCV:
-    def __init__(self):
+    def __init__(self, camera_index=0):
         self.root = tk.Tk()
         self.root.title("AI Audience Engagement Scanner (OpenCV)")
         self.root.geometry("1200x800")
@@ -37,6 +37,7 @@ class EngagementScannerOpenCV:
         
         # Camera and processing variables
         self.camera = None
+        self.camera_index = camera_index  # Allow configurable camera selection
         self.is_running = False
         self.current_session_id = None
         
@@ -47,10 +48,10 @@ class EngagementScannerOpenCV:
     def start_session(self):
         """Start a new engagement scanning session."""
         try:
-            # Initialize camera
-            self.camera = cv2.VideoCapture(0)
+            # Initialize camera with configurable index
+            self.camera = cv2.VideoCapture(self.camera_index)
             if not self.camera.isOpened():
-                messagebox.showerror("Error", "Could not open camera")
+                messagebox.showerror("Error", f"Could not open camera {self.camera_index}")
                 return False
                 
             # Set camera properties for better performance
@@ -192,17 +193,36 @@ class EngagementScannerOpenCV:
 
 def main():
     """Main function to run the application."""
-    print("Starting AI Audience Engagement Scanner (OpenCV Version)...")
+    import sys
     
-    # Check if camera is available
-    test_camera = cv2.VideoCapture(0)
+    # Parse command line arguments for camera selection
+    camera_index = 0  # Default camera
+    if len(sys.argv) > 1:
+        try:
+            camera_index = int(sys.argv[1])
+            print(f"Using camera index: {camera_index}")
+        except ValueError:
+            print("Invalid camera index. Using default camera (0)")
+            camera_index = 0
+    
+    print(f"Starting AI Audience Engagement Scanner (OpenCV Version) with camera {camera_index}...")
+    
+    # Check if specified camera is available
+    test_camera = cv2.VideoCapture(camera_index)
     if not test_camera.isOpened():
-        print("Error: No camera detected. Please connect a camera and try again.")
+        print(f"Error: Camera {camera_index} not detected. Please check camera connection and try again.")
+        # Try to suggest available cameras
+        print("Checking for available cameras...")
+        for i in range(5):  # Check first 5 camera indices
+            test_cam = cv2.VideoCapture(i)
+            if test_cam.isOpened():
+                print(f"  Camera {i}: Available")
+                test_cam.release()
         return
     test_camera.release()
     
-    # Start application
-    app = EngagementScannerOpenCV()
+    # Start application with specified camera
+    app = EngagementScannerOpenCV(camera_index)
     app.run()
 
 if __name__ == "__main__":
